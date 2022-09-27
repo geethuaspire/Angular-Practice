@@ -32,4 +32,9 @@ describe('AppComponent', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('.content span')?.textContent).toContain('TestingProject app is running!');
   });
+
+  it('creating an object',()=>{
+    let app = new AppComponent();
+    expect(app.title).toBe('TestingProject')
+  })
 });
