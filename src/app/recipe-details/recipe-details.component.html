@@ -1,0 +1,45 @@
+<p>recipe-details works!</p>
+<ul>
+    <li><a href="#">To shoppinglist</a></li>
+    <li><a href="#">Edit recipe</a></li>
+    <li><a href="#">Delete Recipe</a></li>
+</ul>
+<div>
+    {{message}}
+</div>
+
+<input type="text" [(ngModel)]="message">
+<div>
+    {{pm}}
+</div>
+<div>
+    <button (click)="sendMessage()">
+        Send Response
+    </button>
+</div>
+<div>
+    {{employee | json}}
+</div>
+<div>
+    {{ "Raj" | salutation:"M"}}
+    {{ "Susan" | salutation:"F"}}
+    {{"Rani" | salutation}}
+</div>
+<div>
+  <h5>Enter the Shirt size</h5>
+  <input type="text" [(ngModel)]="size" >
+  <div>
+   you belong to:  {{ size|sizechart }}
+    </div>
+</div>
+
+<button (click)="hideBut()">{{status?'show':'hide'}}Age</button>
+<div>
+    <button (click)="incrementCount()">count increament</button>
+    <label>count:{{count}}</label>
+</div>
+<div>
+    <label (mouseenter)="incrementCount()">move here</label>
+    <br/>
+    <label>count:{{count}}</label>
+</div>

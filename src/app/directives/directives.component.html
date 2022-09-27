@@ -1,0 +1,57 @@
+<p>directives works!</p>
+<table>
+    <tr>
+        <th>Employee Id</th>
+        <th>Employee Name</th>
+        <th *ngIf="status">Age</th>
+    </tr>
+    <tr *ngFor=" let employee of employees">
+        <td>{{employee.empId}}</td>
+        <td>{{employee.empName}}</td>
+        <td *ngIf="status">{{employee.Age}}</td>
+    </tr>
+</table>
+<button (click)="hideAge()">{{ status?'hide':'show'}}Age</button>
+
+<div>
+    <label>Kindly select your role</label>
+    <select [(ngModel)]="role">
+        <option value="exe">Executive</option>
+        <option value="dev">Developer</option>
+        <option value="mgr">Manager</option>
+        <option value="hr">HR</option>
+        <option value="kindly select a role">Select A Role</option>
+    </select>
+</div>
+
+    <ul [ngSwitch]="role">
+        <li *ngSwitchCase="'exe'">you are assigned to First floor</li>
+        <li *ngSwitchCase="'dev'">you are assigned to second floor</li>
+        <li *ngSwitchCase="'mgr'">you are assigned to third floor</li>
+        <li *ngSwitchCase="'hr'">you are assigned to fourth floor</li>
+    </ul>
+
+
+
+    
+    <div appHighlight>
+        <label>kindly Select Your Role</label>
+        <select [(ngModel)]="myColor">
+            <option value="red">Executive</option>
+            <option value="green">Developer</option>
+            <option value="blue">Manager</option>
+            <option value="black">HR</option>
+            <option value="Select A Role">Select a role</option>
+        </select>
+    </div>
+
+    <ul [ngStyle]="{color:myColor}">
+        <li>For {{role}} -tag{{myColor}}</li> 
+    </ul>
+
+    <label [ngClass]="{test:statusNew}">This Message can also change as warning</label>
+    <button (click)="toggleCase()">Change Label view</button>
+
+
+    <label appHighlight>Hello</label>
+<hr>
