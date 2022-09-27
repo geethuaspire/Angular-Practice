@@ -1,0 +1,36 @@
+
+<form [formGroup]="registrationForm" (submit)="registerUser()">
+
+    <div [ngClass]="{'error-info': submitted && registrationControls['email_address'].errors}">
+        <label>Email Address<sup>*</sup></label>
+        <input type="text" placeholder="Email Address" formControlName="email_address" autocomplete="off">
+        <div>
+            <p *ngIf="submitted && registrationControls['email_address'].errors?.['required']">Email Address required</p>
+        
+        
+          <p *ngIf="submitted && registrationControls['email_address'].errors?.['pattern']">Email Address Invalid</p>  
+        </div>
+    </div>
+
+   <div [ngClass]="{'error-info': submitted && registrationControls['employee_type'].errors}">
+        <label>Employee Type<sup>*</sup></label>
+        <input type="password" placeholder="Password" formControlName="employee_type" autocomplete="off">
+        <div>
+            <p *ngIf="submitted && registrationControls['employee_type'].errors?.['required']">Employee Type Required</p>
+        </div>
+   </div>
+
+   <div [ngClass]="{'error-info': submitted && registrationControls['home_address'].errors}">
+       <label>Home Address</label>
+       <input type="text" placeholder="Home Address" formControlName="home_address" autocomplete="off">
+       <div>
+           <p *ngIf="submitted && registrationControls['home_address'].errors?.['required']">Home Address Required</p>
+       </div>
+   </div>
+    <input type="checkbox" formControlName="is_company_profile_complete">
+    <button type="submit">Register</button>
+    <button (click)="showUsername()">Add</button>
+</form>
+<button (click)="findElement()">find element</button>
+<button (click)="findIndex()">find index</button>
+<button (click)="removeItem()">Remove</button>

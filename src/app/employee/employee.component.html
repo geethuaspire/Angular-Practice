@@ -1,0 +1,46 @@
+<div>
+    <table  style="width:100%">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Email</th>
+        </tr>
+        <ng-container>
+        <tr *ngFor="let em of employees">
+            <td>{{em.name}}</td>
+            <td>{{em.age}}</td>
+            <td>{{em.email}}</td>
+            <td>
+                <button (click)="showDetails()">Show Details</button>
+            </td>
+            <div *ngIf="details">
+                {{em.name}}  
+                {{em.age}}
+                {{em.email}}          
+            </div>
+             </tr>
+        </ng-container>
+    </table>
+<p [ngStyle]="{backgroundColor:getColor()}"
+[ngClass]="{'color':!details}">
+    {{employees[0].name}}
+    {{employees[0].age}}
+    {{employees[0].email}}
+</p>
+  <button (click)="showDe()">gi</button> 
+<!-- <div *ngFor=" let item of emp"
+ [ngStyle]="{backgroundColor:item>=5?'blue':'transparent'}" 
+    [ngClass]="{'white-text':item>=5}">
+    {{item}}
+    
+</div>
+     -->
+     
+
+     <!--index for date-->
+     <div *ngFor=" let item of emp; let i=index"               
+     [ngStyle]="{backgroundColor:i>=5?'blue':'transparent'}" 
+        [ngClass]="{'white-text':i>=5}">
+        {{item}}
+     </div>
+</div>
