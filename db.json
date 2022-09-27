@@ -1,0 +1,64 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Nokia",
+      "description": "works good",
+      "price": 5462,
+      "discount": 200,
+      "images": [
+        "https://www.istockphoto.com/photos/nature",
+        "https://pixabay.com/images/search/nature/"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Apple",
+      "description": "Apple 9 is good",
+      "price": 546432,
+      "discount": 5000,
+      "images": [
+        "https://www.dreamstime.com/photos-images/nature.html",
+        "https://www.istockphoto.com/photos/nature"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Motorola",
+      "description": "Motorola X has good performance",
+      "price": 3454,
+      "discount": 200,
+      "images": [
+        "https://www.istockphoto.com/photos/nature",
+        "https://www.istockphoto.com/photos/nature"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "One Plus",
+      "description": "good in performance and quality",
+      "price": 7876,
+      "discount": 1000,
+      "images": [
+        "https://www.istockphoto.com/photos/nature",
+        "https://www.istockphoto.com/photos/nature"
+      ]
+    }
+  ],
+  "contactUs": [
+    {
+      "username": "dassadasd",
+      "emailid": "dfs@gmail.com",
+      "mobileno": "",
+      "query": "",
+      "id": 1
+    },
+    {
+      "username": "dassadasd",
+      "emailid": "dfs@gmail.com",
+      "mobileno": "2343423432",
+      "query": "vsdfsdfsf sdfs sdf",
+      "id": 2
+    }
+  ]
+}

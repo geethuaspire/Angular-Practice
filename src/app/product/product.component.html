@@ -1,0 +1,28 @@
+
+<table>
+    <thead>
+    <tr>
+        <td>Id</td>
+        <td>ProductName</td>
+        <td>description</td>
+        <td>Price</td>
+        <td>Discount</td>
+        <td>Images</td>
+        
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of productData">
+            <td><a [routerLink]="product.id">{{product.id}}</a></td >
+            <td>{{product.title}}</td>
+            <td>{{product.description}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.discount}}</td>
+            <td *ngFor="let image of product.images">
+                <img [src]="image">
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+    <router-outlet></router-outlet>
