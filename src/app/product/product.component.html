@@ -1,0 +1,16 @@
+<p>product works!</p>
+<td>
+    <thead>
+        <th>Name</th>
+        <th>Price</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+            <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+            <td><a [routerLink]="['edit',product.productId]">Edit</a></td>
+            <td><a [routerLink]="['delete',product.productId]">Delete</a></td>
+        </tr>
+    </tbody>
+</td>
+<router-outlet></router-outlet>
