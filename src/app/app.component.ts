@@ -3,12 +3,12 @@ import { Component, OnInit, VERSION } from "@angular/core";
 import { Observable, of, from, pipe } from "rxjs";
 import { map, tap, share } from "rxjs/operators";
 export class Person {
-  name: string;
+  name!: string;
 }
 @Component({
   selector: "my-app",
   templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.css"]
+  styleUrls: ["./app.component.scss"]
 })
 export class AppComponent implements OnInit {
   name = "Angular " + VERSION.major;
@@ -82,7 +82,7 @@ export class AppComponent implements OnInit {
     // });
   }
 
-  setLoadingSpinner(observable) {
+  setLoadingSpinner(observable: Observable<Object>) {
     this.loading = true;
     observable.subscribe(data => {
       this.loading = false;
