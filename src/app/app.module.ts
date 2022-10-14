@@ -1,18 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HelloEnComponent, HelloTwComponent } from './hello.component';
+import {DynamicComponentDirective} from './dynamic_component.directive';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
+  imports: [BrowserModule, FormsModule],
+  declarations: [AppComponent, HelloEnComponent, HelloTwComponent, DynamicComponentDirective],
+  entryComponents: [HelloEnComponent, HelloTwComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
