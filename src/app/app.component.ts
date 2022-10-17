@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'unit_test';
+  checkPassword(password:string,confirmPassword:string){
+    if(password == confirmPassword){
+      return true;
+    }
+    else{
+      return false;
+    }
+  }
 }
